@@ -1,1 +1,15 @@
-print("Hello")
+number = 49
+if number > 0:
+    print("Незадовольно")
+
+number = 50
+if number > 49:
+    print("Задовільно")
+
+number = 70
+if number > 69:
+    print("Добре")
+
+number = 90
+if number > 89:
+    print("Відмінно")
