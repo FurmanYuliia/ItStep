@@ -1,42 +1,3 @@
-#class Car:
- #   #speed=110
-  #  def __init__(self,speed):
-   #     self.speed=speed
-    #def info(self):
-     #   print("Швидкість авто: ",self.speed)
-#sp=int(input('Максимальна шв авто: '))
-#auto=Car(sp)
-##print("Швидкість авто:",auto.speed)
-#auto.info()
-#auto2=Car(180)
-#auto2.info()
-
-
-#class Pupils:
-    #count=0
-    #def __init__(self,name,height):
-        #self.name=name
-        #self.height=height
-        #Pupils.count+=1
-    #def __str__(self):
-        #print("Ім'я учасника:", self.name,",Зріст:", self.height)
-    #def __bool__(self):
-        #return self.name!=None
-    #def __len__(self):
-        #return self.height
-
-#p1=Pupils("Ігор", 155)
-#p1.__str__()
-#p2=Pupils("Оля", 158)
-#p2.__str__()
-#p3=Pupils("Петро", 162)
-#p3.__str__()
-#print("Всього учасників:",p1.count)
-##print(p1.count(p1.__bool__())
-#print(bool(p2))
-##print(p3.__len__())
-#print(len(p3))
-
 #Симулятор студента
 import random as r
 class Student:
@@ -44,30 +5,46 @@ class Student:
         self.name=name
         self.happy=r.randint(10, 100)
         self.progress=r.randint(0, 10)
+        self.money=r.randint(-50, 100)
         self.alive=True
     def study(self):
         print('Час для навчання')
         self.happy-=r.randint(1, 50)
-        self.progress+=r.randint(1, 5)
+        self.progress+=r.randint(1, 7)
     def sleep(self):
         print('Час для сну')
         self.happy += r.randint(1, 50)
     def chill(self):
         print('Час для відпочинку')
-        self.happy+=r.randint(50, 100)
+        self.happy+=r.randint(1, 20)
         self.progress-=r.randint(5, 10)
+    def earnings(self):
+        print('Час для заробітку')
+        self.happy += r.randint(1, 5)
+        self.money += r.randint(100, 200)
+    def expenses(self):
+        print('Трата грошей')
+        self.happy += r.randint(10, 90)
+        self.money -= r.randint(10, 200)
     def isAlive(self):
         if 1<self.progress<5:
             print('Ти на грані відрахування. Починай навчатися')
-            self.alive=False
+            self.alive = False
         elif self.progress <=1:
             print('Відрахування з інституту')
             self.alive = False
         elif self.progress >= 5:
             print('Відмінно навчаєшся')
             self.alive = True
+        elif self.earnings <= 10:
+            print('Треба піти на роботу!')
+            self.alive = False
+        elif self.expenses >=200:
+            print('Витрачай гроші розумніше')
+            self.alive = True
     def everyday(self):
         print("Рівень щастя", self.happy)
+        print("Гроші", self.money)
         print("Прогрес навчання", self.progress)
     def studyLife(self,day):
         day="\nДень №"+str(day)
@@ -77,6 +54,8 @@ class Student:
             self.study()
         elif res==2:
             self.chill()
+            self.expenses()
+            self.earnings()
         else:
             self.sleep()
         self.everyday()
