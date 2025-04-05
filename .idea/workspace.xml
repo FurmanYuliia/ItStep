@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdd0b117-0c48-4ba6-a3bd-f62c9c971de9" name="Changes" comment="22_03_25">
-      <change afterPath="$PROJECT_DIR$/modify.py" afterDir="false" />
+    <list default="true" id="cdd0b117-0c48-4ba6-a3bd-f62c9c971de9" name="Changes" comment="Полімофізм, Інкапсуляція">
+      <change afterPath="$PROJECT_DIR$/parsing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +52,13 @@
     "Python.23_03_25.executor": "Run",
     "Python.Class communication.executor": "Run",
     "Python.modify.executor": "Run",
+    "Python.parsing.executor": "Run",
     "Python.ООП.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/ItStep"
+    "last_opened_file_path": "D:/ItStep",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -141,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742715585554</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Полімофізм, Інкапсуляція">
+      <option name="closed" value="true" />
+      <created>1743242384884</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743242384884</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -149,6 +159,7 @@
     <MESSAGE value="15_03_25" />
     <MESSAGE value="15_03_25_2" />
     <MESSAGE value="22_03_25" />
-    <option name="LAST_COMMIT_MESSAGE" value="22_03_25" />
+    <MESSAGE value="Полімофізм, Інкапсуляція" />
+    <option name="LAST_COMMIT_MESSAGE" value="Полімофізм, Інкапсуляція" />
   </component>
 </project>
